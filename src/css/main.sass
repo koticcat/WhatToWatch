@@ -17,6 +17,7 @@ $break: 1028px
     width: 100%
     height: 100%
     display: grid
+    background: red
 
 .floating-nav-container
     display: grid
@@ -53,7 +54,9 @@ $break: 1028px
         font-size: 1.2  rem
   
 .open
-    display: flex;
+    display: flex
+// .close
+//     display: none
 .fab-main
     display: flex
     width: 70%
@@ -125,3 +128,11 @@ $break: 1028px
     &:hover:before,&:hover:after
         visibility: visible
         opacity: 0.4
+    @media screen and (max-width: $break)
+        &:hover:before,&:hover:after
+            visibility: hidden
+
+.landing-splash
+    width: 100%
+    height: 100%
+    background: grey
