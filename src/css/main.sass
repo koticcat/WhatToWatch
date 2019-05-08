@@ -1,3 +1,4 @@
+@import "./loader"
 *
     margin: 0
     padding: 0
@@ -7,17 +8,65 @@ html
         margin: 0
         height: 100%
         width: 100%
+        background: black
 a 
     text-decoration: none
     color: black
 
 $break: 1028px
 
+.landing-splash
+    display: flex
+    width: 100%
+    height: 100%
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    background: black
+    transition: transform 0.6s ease
+
+img 
+    // background: blue
+    max-width: 100%
+    max-height: 100%
+    animation: breath 7s ease-out infinite normal
+
+@keyframes breath
+    0% 
+        transform: scale(0.9)
+    25%
+        transform: scale(1)
+    60%
+        transform: scale(0.9)
+    100%
+        transform: scale(1)
+
+.splash-container
+    width: 1000px
+    height: 500px
+    @media screen and (max-width: $break)
+        width: 100%
+        height: 80%
+
+canvas
+  width: 100%
+  height: 100%
+
+.splash-loader
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100px
+    height: 100px
+    animation: breath 7s ease-out infinite normal
+
 .landing-container
     width: 100%
     height: 100%
-    display: grid
-    background: red
+    display: none
+    justify-content: center
+    align-items: center
+    background: black
 
 .floating-nav-container
     display: grid
@@ -25,49 +74,49 @@ $break: 1028px
     height: 600px
     position: fixed
     bottom: 50px
-    right: 30px
-    z-index: 30
+    right: 2px
+    z-index: 30        
     grid-template-rows: 1fr 1fr 1fr 1fr
     justify-items: center
     align-items: center
     @media screen and (max-width: $break) 
-        width: 25%
-        height: 30%
+        width: 30%
+        height: 60%
         right: 10px
-        bottom: 10px
+        bottom: 5px
+
 
 
 .fab-button
     display: none
     background: rgb(255, 158, 89)
-    box-shadow: 0px 0px 8px 1px grey
-    width: 60%
-    height: 65%
+    box-shadow: 0px 0px 8px 1px white
+    width: 50%
+    height: 55%
     font-size: 2rem
     color: rgb(252, 248, 244)
     border-radius: 100%
     justify-content: center
     align-items: center
     @media screen and (max-width: $break) 
-        width: 50px
-        height: 50px
+        width: 60px
+        height: 60px
         font-size: 1.2  rem
   
 .open
     display: flex
-// .close
-//     display: none
+
 .fab-main
     display: flex
-    width: 70%
-    height: 75%
+    width: 50%
+    height: 55%
     grid-row: 4 
-    background: rgb(255, 97, 86)
+    background: red
     font-size: 2.3rem
     color: white
     @media screen and (max-width: $break) 
-        width: 60px
-        height: 60px
+        width: 100px
+        height: 100px
         font-size: 1.8rem
     &:hover
         background: rgb(255, 63, 63)
@@ -80,7 +129,7 @@ $break: 1028px
 
 =triangle()
     $size: 8px
-    $color: #000
+    $color: #fff
     content: ''
     display: block
     position: absolute
@@ -97,9 +146,9 @@ $break: 1028px
     position: absolute
     min-width: 100px
     height: 30px
-    background-color: #000
-    background-color: hsla(0, 0%, 20%, 0.9)
-    color: #fff
+    background-color: #fff
+    // background-color: hsla(0, 0%, 20%, 0.9)
+    color: #000
     content: attr(tooltip)
     justify-content: center
     align-items: center
@@ -127,12 +176,18 @@ $break: 1028px
 [tooltip]
     &:hover:before,&:hover:after
         visibility: visible
-        opacity: 0.4
+        opacity: 0.8
     @media screen and (max-width: $break)
         &:hover:before,&:hover:after
             visibility: hidden
 
-.landing-splash
-    width: 100%
-    height: 100%
+.main-wrapper
+    width: 80%
+    height: 80%
     background: grey
+    border-radius: 25px
+    box-shadow: 0 0 15px 1px grey
+    @media screen and (max-width: $break)
+        width: 92%
+        height: 70%
+        margin-bottom: 100px

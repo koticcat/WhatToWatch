@@ -1,3 +1,31 @@
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 64px;
+  height: 64px; }
+
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 6px;
+  box-sizing: border-box;
+  border: 26px solid white;
+  border-color: red transparent red transparent;
+  animation: lds-hourglass 1.2s infinite; }
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); }
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); }
+  100% {
+    transform: rotate(1800deg); } }
+
 * {
   margin: 0;
   padding: 0; }
@@ -5,17 +33,66 @@
 html body {
   margin: 0;
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  background: black; }
 
 a {
   text-decoration: none;
   color: black; }
 
+.landing-splash {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  transition: transform 0.6s ease; }
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  animation: breath 7s ease-out infinite normal; }
+
+@keyframes breath {
+  0% {
+    transform: scale(0.9); }
+  25% {
+    transform: scale(1); }
+  60% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(1); } }
+
+.splash-container {
+  width: 1000px;
+  height: 500px; }
+
+@media screen and (max-width: 1028px) {
+  .splash-container {
+    width: 100%;
+    height: 80%; } }
+
+canvas {
+  width: 100%;
+  height: 100%; }
+
+.splash-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  animation: breath 7s ease-out infinite normal; }
+
 .landing-container {
   width: 100%;
   height: 100%;
-  display: grid;
-  background: red; }
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: black; }
 
 .floating-nav-container {
   display: grid;
@@ -23,7 +100,7 @@ a {
   height: 600px;
   position: fixed;
   bottom: 50px;
-  right: 30px;
+  right: 2px;
   z-index: 30;
   grid-template-rows: 1fr 1fr 1fr 1fr;
   justify-items: center;
@@ -31,17 +108,17 @@ a {
 
 @media screen and (max-width: 1028px) {
   .floating-nav-container {
-    width: 25%;
-    height: 30%;
+    width: 30%;
+    height: 60%;
     right: 10px;
-    bottom: 10px; } }
+    bottom: 5px; } }
 
 .fab-button {
   display: none;
   background: #ff9e59;
-  box-shadow: 0px 0px 8px 1px grey;
-  width: 60%;
-  height: 65%;
+  box-shadow: 0px 0px 8px 1px white;
+  width: 50%;
+  height: 55%;
   font-size: 2rem;
   color: #fcf8f4;
   border-radius: 100%;
@@ -50,8 +127,8 @@ a {
 
 @media screen and (max-width: 1028px) {
   .fab-button {
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     font-size: 1.2  rem; } }
 
 .open {
@@ -59,17 +136,17 @@ a {
 
 .fab-main {
   display: flex;
-  width: 70%;
-  height: 75%;
+  width: 50%;
+  height: 55%;
   grid-row: 4;
-  background: #ff6156;
+  background: red;
   font-size: 2.3rem;
   color: white; }
 
 @media screen and (max-width: 1028px) {
   .fab-main {
-    width: 60px;
-    height: 60px;
+    width: 100px;
+    height: 100px;
     font-size: 1.8rem; } }
 
 .fab-main:hover {
@@ -98,9 +175,8 @@ a {
   position: absolute;
   min-width: 100px;
   height: 30px;
-  background-color: #000;
-  background-color: rgba(51, 51, 51, 0.9);
-  color: #fff;
+  background-color: #fff;
+  color: #000;
   content: attr(tooltip);
   justify-content: center;
   align-items: center;
@@ -116,19 +192,27 @@ a {
   width: 0px;
   bottom: calc(120% - 8px);
   transform: rotate(180deg);
-  border-bottom: 8px solid #000;
+  border-bottom: 8px solid #fff;
   border-left: 8px solid transparent;
   border-right: 8px solid transparent; }
 
 [tooltip]:hover:before, [tooltip]:hover:after {
   visibility: visible;
-  opacity: 0.4; }
+  opacity: 0.8; }
 
 @media screen and (max-width: 1028px) {
   [tooltip]:hover:before, [tooltip]:hover:after {
     visibility: hidden; } }
 
-.landing-splash {
-  width: 100%;
-  height: 100%;
-  background: grey; }
+.main-wrapper {
+  width: 80%;
+  height: 80%;
+  background: grey;
+  border-radius: 25px;
+  box-shadow: 0 0 15px 1px grey; }
+
+@media screen and (max-width: 1028px) {
+  .main-wrapper {
+    width: 92%;
+    height: 70%;
+    margin-bottom: 100px; } }

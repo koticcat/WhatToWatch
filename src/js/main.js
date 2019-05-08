@@ -1,16 +1,9 @@
 import { $ } from './jquery_init.js';
 import { elements } from './views/base.js'
-import {fab_init} from './views/fab'
+import {init_app} from './views/init_app.js'
 
 console.log('App Has Started');
 
-/* Initalise fab */
-fab_init();
-
-
-$(window).on('load',()=>{
-  console.log('win');
-});
-$(document).ready(()=>{
-  console.log('doc');
-});
+/*App initiaslised */
+init_app();
+console.log('App Has been Initalised')

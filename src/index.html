@@ -8,11 +8,16 @@
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
      <title>WhatToWatch</title>
-     
  </head>
  <body>
-    <div class="landing-splash">
-        
+    <div class="landing-splash" id="splash-cont">
+        <div class="splash-container">
+            <canvas id="canvas"></canvas>
+            <div id="buffer" style="display:none;"></div>
+        </div>
+        <div class="splash-loader">
+            <div class="lds-hourglass" id="spinner"></div>
+        </div> 
     </div>
     <div class="landing-container">
         <div class="floating-nav-container">
@@ -20,6 +25,9 @@
             <a href="#" class="fab-button fab-item" tooltip="filter"><i class="fas fa-filter"></i></a>
             <a href="#" class="fab-button fab-item" tooltip="randomise"><i class="fas fa-redo"></i></a>
             <a href="#" class="fab-button fab-main" id="fab-menu"tooltip="menu"><i class="fas fa-chevron-up up-arrow"></i></a>
+        </div>
+        <div class="main-wrapper animated fadeInDown">
+
         </div>    
     </div>
  </body>

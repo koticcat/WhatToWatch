@@ -17,6 +17,8 @@ module.exports = {
             {
               from: './src/css/main.css',
               to: './css',
+            //   from: './src/img',
+            //   to: './img',
             },
         ]),
         new HtmlWebpack({
