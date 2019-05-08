@@ -562,6 +562,8 @@ function init_splash(){
     // 	document.onmousedown = function() {camera.zoom = Math.random()*1+1};
     // 	document.onmouseup = function() {camera.zoom = 1};
     // };
+
+    
 }
 
 export {init_splash};

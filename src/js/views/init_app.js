@@ -1,13 +1,14 @@
 import { $ } from '../jquery_init.js';
 import { elements } from './base.js'
 import {fab_init} from './fab.js'
-import {init_splash} from './splash.js'
+// import {init_splash} from './splash.js'
 
 /* Initalise app */
 
 function init_app(){
     console.log('App is being initalised');
     fab_init();
+    // init_splash();
     setTimeout(()=>{
         $(elements.splash_container).css("transform","translate(0,-100%)");
         $(document).ready(()=>{
@@ -17,8 +18,7 @@ function init_app(){
             },580);
             console.log('Ending Splash');
         });
-    },100);
-    init_splash();
+    },3000);
     
 }
 export {init_app};
