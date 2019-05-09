@@ -157,9 +157,14 @@ canvas {
 
 @media screen and (max-width: 1028px) {
   .fab-main {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
     font-size: 1.8rem; } }
+
+@media screen and (max-width: 1024px) and (min-width: 600px) {
+  .fab-main {
+    width: 100px;
+    height: 100px; } }
 
 .fab-main:hover {
   background: #ff3f3f; }
@@ -217,6 +222,11 @@ canvas {
     visibility: hidden; } }
 
 .main-wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   width: 80%;
   height: 80%;
   background: #d8d8d8;
@@ -227,4 +237,84 @@ canvas {
   .main-wrapper {
     width: 92%;
     height: 70%;
-    margin-bottom: 100px; } }
+    margin-bottom: 100px;
+    flex-direction: column-reverse;
+    flex-wrap: wrap; } }
+
+.main-items {
+  flex-grow: 3.5;
+  height: 95%; }
+
+@media screen and (max-width: 1028px) {
+  .main-items {
+    background: red;
+    width: 95%; } }
+
+@media screen and (max-width: 1028px) {
+  .info-wrapper {
+    max-height: 70%; } }
+
+.poster-wrapper {
+  flex-grow: 1;
+  background: red; }
+
+@media screen and (max-width: 1028px) {
+  .poster-wrapper {
+    background: blue;
+    max-height: 25%;
+    display: flex;
+    justify-content: flex-end; } }
+
+.poster-container {
+  width: 95%;
+  height: 60%;
+  border-radius: 25px;
+  border: 2px solid black;
+  margin-right: 5px; }
+
+@media screen and (max-width: 1028px) {
+  .poster-container {
+    height: 97%;
+    width: 50%; } }
+
+.fab-option-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  display: none;
+  background: rgba(255, 0, 0, 0.2); }
+
+.menu-options {
+  width: 55%;
+  height: 50%;
+  border-radius: 25px;
+  background: #ff7777;
+  border: 5px solid black; }
+
+@media screen and (max-width: 1028px) {
+  .menu-options {
+    width: 80%; } }
+
+.menu-close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  left: calc(100% - 50px);
+  color: white;
+  position: relative; }
+
+.fab-option-container {
+  position: relative;
+  margin: auto;
+  height: 80%;
+  width: 90%;
+  border-radius: 25px;
+  background: #FF5159;
+  display: none; }

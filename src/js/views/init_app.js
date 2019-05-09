@@ -18,7 +18,14 @@ function init_app(){
             },580);
             console.log('Ending Splash');
         });
-    },3000);
+    },500);
     
 }
 export {init_app};
+
+
+
+
+
+
+
