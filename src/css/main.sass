@@ -216,9 +216,54 @@ canvas
 
 
 .info-container
-    background: red
+    // background: red
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
     @media screen and (max-width: $break)
         grid-row: 1 / span 2
+
+.info-wrapper
+    width: 90%
+    height: 90%
+    border-radius: 25px
+    background: #cccccc
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+.info-items
+    // background: blue
+    width: 100%
+    margin: 8px
+    max-height: 16.66%
+    font-size: 2rem
+    font-family: 'Open Sans Condensed', sans-serif;
+    @media screen and (max-width: $break)
+        font-size: 0.8rem
+
+.info-desc-cont
+    overflow: hidden
+.imdb-rating-cont
+    display: flex
+    align-items: center
+
+.info-desc
+    font-size: 1.3vw
+    color: red
+    // background: red
+    font-family: 'Source Sans Pro', sans-serif;
+    @media screen and (max-width: $break)
+        font-size: 1vh 
+.imdb-link
+    text-decoration: underline
+    color: black
+    font-size: 0.8rem
+    display: none
+    width: 20px
+
 .poster-container
     max-width: 200px
     max-height: 300px

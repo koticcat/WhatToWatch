@@ -4,7 +4,7 @@
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link rel="stylesheet" type="text/css" href="css/main.css">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Source+Sans+Pro" rel="stylesheet">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
      <link rel="icon" href="img/favicon.png" sizes="16x16" type="image/png">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -44,15 +44,22 @@
         <div class="floating-nav-container">
             <a href="#" class="fab-button fab-item" id="fab-like" tooltip="likes"><i class="fas fa-heart"></i></a>
             <a href="#" class="fab-button fab-item" id="fab-sort" tooltip="filter"><i class="fas fa-filter"></i></a>
-            <a href="#" class="fab-button fab-item" tooltip="randomise"><i class="fas fa-redo"></i></a>
+            <a href="#" class="fab-button fab-item" id="fab-reload" tooltip="randomise"><i class="fas fa-redo"></i></a>
             <a href="#" class="fab-button fab-main" id="fab-menu"tooltip="menu"><i class="fas fa-chevron-up up-arrow"></i></a>
         </div>
         <div class="main-wrapper animated fadeInDown">
             <div class="info-container">
-
+                <div class="info-wrapper">
+                    <div class="info-items">Title:&nbsp<span id="item-title" class="info-desc"></span></div>
+                    <div class="info-items info-desc-cont">Description:&nbsp<span id="item-desc" class="info-desc"></span></div>
+                    <div class="info-items">Director:&nbsp<span id="item-director" class="info-desc"></span></div>
+                    <div class="info-items">Release date:&nbsp<span id="item-rel-date" class="info-desc"></span></div>
+                    <div class="info-items imdb-rating-cont">IMDB rating:&nbsp<span id="item-rating" class="info-desc"></span>&nbsp<a class="imdb-link" target="_blank" href=""><i class="fas fa-external-link-alt"></i></a></div>
+                    <div class="info-items">Trailer Link:&nbsp<a id="item-trailer" target="_blank" class="info-desc">Click Here</a></div>
+                </div>
             </div>
             <div class="poster-container">
-                <img class="poster-img" src="img/test.jpg">
+                <img class="poster-img" src="img/noposter.png">
             </div>
         </div>    
     </div>

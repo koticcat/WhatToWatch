@@ -1,5 +1,6 @@
 import { $ } from '../jquery_init.js';
-import { elements } from './base.js'
+import { elements } from './base.js';
+import {getmovie} from '../main.js'
 
 var fab_init=function fab(){
     console.log('fab module has started');
@@ -24,6 +25,9 @@ var fab_init=function fab(){
         $(elements.fab_arrow).toggleClass('flip');
     }
     
+    $(elements.fab_reload_btn).click(()=>{
+        getmovie();
+    });
     $(elements.fab_menu_btn).click(()=>{
         click_action(); 
         if($(elements.fab_arrow).hasClass('flip')){

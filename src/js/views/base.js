@@ -8,6 +8,7 @@ export const elements = {
     /*FAB memu options */
     fab_filter_btn: $('#fab-sort'),
     fab_like_btn: $('#fab-like'),
+    fab_reload_btn : $('#fab-reload'),
     fab_option_warpper: $('#fab-menu-warp'),
     fab_close_btn: $('.menu-close-btn'),
     fab_like_cont: $('.like-container'),
@@ -15,7 +16,15 @@ export const elements = {
     /* splashscreen */
     splash_container: $('.landing-splash'),
     /* Main Page */
-    main_container: $('.landing-container')
+    main_container: $('.landing-container'),
+    poster_container: $('.poster-img'),
+    title: $('#item-title'),
+    desc: $('#item-desc'),
+    director: $('#item-director'),
+    rel_date: $('#item-rel-date'),
+    imdb_rating: $('#item-rating'),
+    imdb_link: $('.imdb-link'),
+    trailer_link: $('#item-trailer')
 };
 
 
