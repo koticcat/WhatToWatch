@@ -6,45 +6,35 @@ export default class GetMovie{
         this.parameters = parameters;
     }
     get_random_id(){
-        var max = 951;
-        var min = 62;
-        return Math.random() * (max - min) + min;
+        var max = 40000; //40000
+        var min = 30;
+        return Math.round(Math.random() * (max - min) + min);
     }
-    async getMovie()
+    async getMovie(parameters)
     {
         var api_key = '6d2cc019c4eaf4d8ba5c24fa599b15c5';
         var random_id = this.get_random_id();
-        fetch(`https://api.themoviedb.org/3/movie/${random_id}?api_key=${api_key}`)
-        .then((response=>{
-            if (response.ok) 
+
+        
+        const res = await fetch(`https://api.themoviedb.org/3/movie/${random_id}?api_key=${api_key}`);
+        if(res.ok){
+            console.log('Got it');
+            const json_main = await res.json();
+            this.data = json_main;
+            var imdb_id =this.data.imdb_id; 
+            const trailer_link = await fetch(`http://api.themoviedb.org/3/movie/${random_id}/videos?api_key=${api_key}`)
+            if(trailer_link.ok)
             {
-                return response.json();
-            } 
-            else 
-            {
-                throw new Error('Something went wrong');
+                const trailer_link_json = await trailer_link.json();
+                this.utube_link = trailer_link_json;
             }
-        }))
-        .then(async (responseJson) => {
-            var data = responseJson;
-            this.data = data;
-            console.log(data);
-            const trailer_link = await fetch(`http://api.themoviedb.org/3/movie/${random_id}/videos?api_key=${api_key}`);
-            var utube_id = await trailer_link.json();
-            this.utube_id = utube_id;
-
-            // var imbd_id = data.imbd_id
-            const imdb_rating_request = await fetch(`http://www.omdbapi.com/?i=${data.imdb_id}&plot=short&r=json&apikey=cf3ed16a
-            `);
-            var imdb_info= await imdb_rating_request.json();
-            console.log(imdb_info);
-            this
-            // console.log(utube_id.results[0].key);
-
-            })
-        .catch((error)=>{
-            console.log(error);
-            this.getMovie();
-        })
+            const imdb_rating_request = await fetch(`http://www.omdbapi.com/?i=${imdb_id}&plot=short&r=json&apikey=cf3ed16a`);
+            if(imdb_rating_request.ok)
+            {
+                const imdb_info= await imdb_rating_request.json();
+                this.imdb_info = imdb_info; 
+            }
+        }
     }
 }
+
