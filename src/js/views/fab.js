@@ -3,7 +3,7 @@ import { elements } from './base.js';
 import {getmovie} from '../main.js'
 
 var fab_init=function fab(){
-    console.log('fab module has started');
+    // console.log('fab module has started');
     $(elements.fab_items).addClass('animated');
     $(elements.fab_menu_btn).addClass('animated fadeInUp');
     var open = 0;

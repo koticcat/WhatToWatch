@@ -4,7 +4,7 @@ import { elements } from './base.js';
 export const RenderResults = (movie_obj)=>{
 
     if(movie_obj.data.poster_path!==null){
-        const poster_path = "http://image.tmdb.org/t/p/w200"+movie_obj.data.poster_path;
+        const poster_path = "https://image.tmdb.org/t/p/w200"+movie_obj.data.poster_path;
         $(elements.poster_container).attr('src',poster_path);
     }
     else
@@ -28,7 +28,8 @@ export const RenderResults = (movie_obj)=>{
     else
     {
         $(elements.trailer_link).html('Click Here');
-        var trailer_path = "http://www.youtube.com/watch?v="+movie_obj.utube_link.results[0].key;
+        var trailer_path = "https://www.youtube.com/watch?v="+movie_obj.utube_link.results[0].key;
         $(elements.trailer_link).attr("href",trailer_path);
     }
+
 }

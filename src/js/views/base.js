@@ -6,6 +6,7 @@ export const elements = {
     fab_menu_btn : $('.fab-main'),
     fab_arrow: $('.up-arrow'),
     /*FAB memu options */
+    fab_menu_container: $('.menu-options'),
     fab_filter_btn: $('#fab-sort'),
     fab_like_btn: $('#fab-like'),
     fab_reload_btn : $('#fab-reload'),
@@ -13,6 +14,8 @@ export const elements = {
     fab_close_btn: $('.menu-close-btn'),
     fab_like_cont: $('.like-container'),
     fab_filter_cont: $('.sort-container'),
+    fab_spinner: $('.preloader-container'),
+    fab_status: $('.load-status'),
     /* splashscreen */
     splash_container: $('.landing-splash'),
     /* Main Page */
