@@ -8,7 +8,6 @@
   <a href="https://github.com/othneildrew/Best-README-Template">
     <img src="src/img/logo_transparent.png" alt="Logo" width="20%" height="20%">
   </a>
-  <h3 align="center">WhatToWatch</h3>
 </p>
 
 
