@@ -27,7 +27,16 @@ export const elements = {
     rel_date: $('#item-rel-date'),
     imdb_rating: $('#item-rating'),
     imdb_link: $('.imdb-link'),
-    trailer_link: $('#item-trailer')
+    trailer_link: $('#item-trailer'),
+    /*filer-results*/
+    rating_inp: $('#imdb_slider_rating'),
+    rating_slider_value: $('.sort-slider-value'),
+    release_year_inp: $('#release_year'),
+    non_eng_inp: $('#non_english_check'),
+    adult_inp: $('#adult_check'),
+    filter_btn: $('#set_filter'),
+    filter_icon: $('.filter_icon')
+
 };
 
 

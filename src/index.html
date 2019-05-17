@@ -34,30 +34,27 @@
                 <div class="menu-close-btn">
                     <i class="far fa-times-circle"></i>
                 </div>
-                <div class="fab-option-container like-container">
-                    <h1>Like</h1>
-                </div>
                 <div class="fab-option-container">
                     <div class="fab-options sort-option-container">
-                        <span class="sort-headers">IMDB rating:</span>
-                        <input class="slider-rating" type="range" min="1" max="10" value="0" step="0.1">
-                        <span class="sort-slider-value">&nbsp8.2</span>
+                        <span class="sort-headers">IMDB rating:&nbsp</span>
+                        <input class="slider-rating" id="imdb_slider_rating" type="range" min="1" max="9" value="0" step="0.1">
+                        <span class="sort-slider-value"></span>
                     </div>
                     <div class="fab-options year-realease-container">
                         <span class="sort-headers">Year of Release:</span>
-                        <input class="release-data-inp" type="number" min="1950" max="2020">
+                        <input class="release-data-inp" id="release_year" type="number" value="1950" max="2020">
                     </div>
                     <div class="fab-options">
                         <span class="sort-headers">Non-english:</span>&nbsp&nbsp
-                        <input class="fab-checkbox" type="checkbox" value="non-en">
+                        <input class="fab-checkbox" id="non_english_check" type="checkbox" value="!non-en">
                     </div>
                     <div class="fab-options">
                         <span class="sort-headers">Adult:</span>&nbsp&nbsp
-                        <input class="fab-checkbox" type="checkbox" value="adult">
+                        <input class="fab-checkbox" id="adult_check" type="checkbox" value="!adult">
                     </div>
                 </div>
-                <div class="filter-button">
-                    <i class="fas fa-sync-alt"></i>
+                <div class="filter-button" id="set_filter" tooltip="filter">
+                    <i class="fas fa-sync-alt filter_icon"></i>
                 </div>
             </div>
             <div class="preloader-container">
@@ -66,7 +63,6 @@
             </div>
         </div>
         <div class="floating-nav-container">
-            <a href="#" class="fab-button fab-item" id="fab-like" tooltip="likes"><i class="fas fa-heart"></i></a>
             <a href="#" class="fab-button fab-item" id="fab-sort" tooltip="filter"><i class="fas fa-filter"></i></a>
             <a href="#" class="fab-button fab-item" id="fab-reload" tooltip="randomise"><i class="fas fa-redo"></i></a>
             <a href="#" class="fab-button fab-main" id="fab-menu"tooltip="menu"><i class="fas fa-chevron-up up-arrow"></i></a>

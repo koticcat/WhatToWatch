@@ -2,7 +2,6 @@ import { $ } from '../jquery_init.js';
 import { elements } from './base.js';
 
 export const RenderResults = (movie_obj)=>{
-
     if(movie_obj.data.poster_path!==null){
         const poster_path = "https://image.tmdb.org/t/p/w200"+movie_obj.data.poster_path;
         $(elements.poster_container).attr('src',poster_path);
