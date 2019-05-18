@@ -40,6 +40,14 @@ Make Sure You have npm and Node isntalled as well as new api keys, then:
 ``` 
 3.Change the API keys to your API keys in the /model/getmovie.js file.
 
+4.Run the webpack script, to lauch the app in the localhost
+ ```sh
+  npm run start
+``` 
+5.To bundle the js files and build the dist folder, use script
+ ```sh
+  npm run build  OR npm run dev (for bypassing webpack optimization)
+```
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
