@@ -46,8 +46,14 @@ Make Sure You have npm and Node isntalled as well as new api keys, then:
 ``` 
 5.To bundle the js files and build the dist folder, use script
  ```sh
-  npm run build  OR npm run dev (for bypassing webpack optimization)
+  npm run build 
 ```
+ OR 
+  ```sh
+  npm run dev
+```
+for bypassing webpack optimization
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
