@@ -3,7 +3,7 @@
 [![Node](https://img.shields.io/badge/Node-10.15.2-yellow.svg)]()
 [![Webpack](https://img.shields.io/badge/Webpack-4.30.0-red.svg)]()
 Deployed at:
-https://koticcat.github.io/WhattoWatch.io/
+https://adithyaanil1999.github.io/WhattoWatch.io/
 <br />
 <p align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
